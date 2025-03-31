@@ -1,7 +1,7 @@
 // routes/articles.js
 const express = require('express');
 const db = require('../db');
-const authenticateToken = require('../middleware/auth_mid');
+const {authenticateToken} = require('../middleware/auth_mid');
 
 const router = express.Router();
 
