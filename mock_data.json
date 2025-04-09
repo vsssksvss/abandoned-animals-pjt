@@ -1,0 +1,90 @@
+{
+  "response": {
+    "body": {
+      "items": {
+        "item": [
+          {
+            "desertionNo": "100000001",
+            "kindCd": "푸들",
+            "sexCd": "F",
+            "age": "2023(년생)",
+            "popfile": "https://placedog.net/500?id=1",
+            "careNm": "강남구보호센터"
+          },
+          {
+            "desertionNo": "100000002",
+            "kindCd": "말티즈",
+            "sexCd": "M",
+            "age": "2022(년생)",
+            "popfile": "https://placedog.net/500?id=2",
+            "careNm": "서초구보호소"
+          },
+          {
+            "desertionNo": "100000003",
+            "kindCd": "진돗개",
+            "sexCd": "F",
+            "age": "2021(년생)",
+            "popfile": "https://placedog.net/500?id=3",
+            "careNm": "은평구보호센터"
+          },
+          {
+            "desertionNo": "100000004",
+            "kindCd": "포메라니안",
+            "sexCd": "M",
+            "age": "2020(년생)",
+            "popfile": "https://placedog.net/500?id=4",
+            "careNm": "강북구보호센터"
+          },
+          {
+            "desertionNo": "100000005",
+            "kindCd": "시츄",
+            "sexCd": "F",
+            "age": "2019(년생)",
+            "popfile": "https://placedog.net/500?id=5",
+            "careNm": "마포구보호센터"
+          },
+          {
+            "desertionNo": "100000006",
+            "kindCd": "골든리트리버",
+            "sexCd": "M",
+            "age": "2018(년생)",
+            "popfile": "https://placedog.net/500?id=6",
+            "careNm": "노원구보호센터"
+          },
+          {
+            "desertionNo": "100000007",
+            "kindCd": "웰시코기",
+            "sexCd": "F",
+            "age": "2017(년생)",
+            "popfile": "https://placedog.net/500?id=7",
+            "careNm": "동작구보호소"
+          },
+          {
+            "desertionNo": "100000008",
+            "kindCd": "닥스훈트",
+            "sexCd": "M",
+            "age": "2016(년생)",
+            "popfile": "https://placedog.net/500?id=8",
+            "careNm": "성북구보호센터"
+          },
+          {
+            "desertionNo": "100000009",
+            "kindCd": "요크셔테리어",
+            "sexCd": "F",
+            "age": "2015(년생)",
+            "popfile": "https://placedog.net/500?id=9",
+            "careNm": "중랑구보호소"
+          },
+          {
+            "desertionNo": "100000010",
+            "kindCd": "시베리안허스키",
+            "sexCd": "M",
+            "age": "2014(년생)",
+            "popfile": "https://placedog.net/500?id=10",
+            "careNm": "도봉구보호소"
+          }
+        ]
+      }
+    }
+  }
+}

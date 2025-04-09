@@ -6,9 +6,11 @@
     "body-parser": "^2.2.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
     "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
     "nodemon": "^3.1.9",
+    "react": "^19.1.0",
     "sqlite3": "^5.1.7",
     "xml2js": "^0.6.2"
   }

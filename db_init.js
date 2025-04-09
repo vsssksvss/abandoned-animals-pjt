@@ -36,4 +36,17 @@ db.run(`
   )
 `);
 
+db.run(`
+  CREATE TABLE IF NOT EXISTS animals (
+    id TEXT PRIMARY KEY,
+    name TEXT,
+    breed TEXT,
+    age TEXT,
+    gender TEXT,
+    image_url TEXT,
+    location TEXT
+  )
+`);
+
+
 console.log("✅ 모든 테이블 준비 완료!");

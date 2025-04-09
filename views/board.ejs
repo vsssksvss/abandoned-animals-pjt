@@ -1,0 +1,29 @@
+<!-- views/board.ejs -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>게시판</title>
+</head>
+<body style="font-family: sans-serif; padding: 2rem;">
+  <h1>📢 게시판</h1>
+  <form action="/api/articles" method="post" style="margin-bottom: 2rem;">
+    <input type="text" name="title" placeholder="제목" required style="display:block; width: 100%; margin-bottom: 0.5rem; padding: 0.5rem">
+    <textarea name="content" placeholder="내용" required style="display:block; width: 100%; height: 100px; padding: 0.5rem"></textarea>
+    <button type="submit" style="padding: 0.5rem 1rem; background-color: teal; color: white;">글 작성</button>
+  </form>
+
+  <% if (articles.length === 0) { %>
+    <p>아직 게시글이 없습니다.</p>
+  <% } else { %>
+    <ul style="list-style: none; padding: 0;">
+      <% articles.forEach(article => { %>
+        <li style="border: 1px solid #ccc; margin-bottom: 1rem; padding: 1rem;">
+          <h3><%= article.title %></h3>
+          <p><%= article.content %></p>
+        </li>
+      <% }) %>
+    </ul>
+  <% } %>
+</body>
+</html>
