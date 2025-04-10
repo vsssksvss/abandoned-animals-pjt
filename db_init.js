@@ -36,6 +36,7 @@ db.run(`
   )
 `);
 
+// animal 테이블
 db.run(`
   CREATE TABLE IF NOT EXISTS animals (
     id TEXT PRIMARY KEY,

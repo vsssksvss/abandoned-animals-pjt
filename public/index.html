@@ -1,23 +1,30 @@
-<!-- public/index.html -->
 <!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>유기동물 커뮤니티</title>
+  <title>대한민국 유기동물 커뮤니티</title>
+  <!-- Google Fonts에서 Noto Sans KR 로드 -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
-  <!-- 구글 폰트 등 추가 가능 -->
 </head>
 <body>
-  <div id="user-info"></div>
-  <div id="nav">
-    <button id="btn-animals">유기동물 보기</button>
+  <!-- 상단 헤더 -->
+  <header id="header">
+    <h1>대한민국 유기동물 커뮤니티</h1>
+  </header>
+
+  <!-- 네비게이션 바 -->
+  <nav id="nav">
+    <button id="btn-animals">동물 보기</button>
     <button id="btn-board">게시판</button>
     <button id="btn-login">로그인</button>
     <button id="btn-signup">회원가입</button>
-  </div>
+  </nav>
+
+  <!-- 콘텐츠 영역 -->
   <div id="content"></div>
-  
-  <!-- body 하단에 스크립트 삽입 -->
+
+  <!-- 클라이언트 스크립트 -->
   <script src="/main.js"></script>
 </body>
 </html>

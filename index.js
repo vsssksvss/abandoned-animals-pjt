@@ -1,4 +1,3 @@
-// index.js
 require('dotenv').config();
 const express = require('express');
 const path = require('path');
@@ -9,7 +8,7 @@ const db = require('./db'); // 데이터베이스 모듈
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// 미들웨어를 먼저 등록합니다.
+// 미들웨어
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -34,7 +33,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/index.html'));
 });
 
-// (선택) 동물 리스트 페이지 HTML 제공 – API 대신 사용 가능
+// 동물 리스트 페이지 HTML 제공 – API 대신 사용 가능
 app.get('/animals', async (req, res) => {
   try {
     const animals = await db.all('SELECT * FROM animals');
@@ -73,5 +72,5 @@ app.get('/animals', async (req, res) => {
 
 // 서버 실행
 app.listen(PORT, () => {
-  console.log(`✅ 서버 실행: http://localhost:${PORT}`);
+  console.log(`서버: http://localhost:${PORT}`);
 });
