@@ -8,43 +8,57 @@
 /* 전체 body 스타일 */
 body {
   font-family: 'Noto Sans KR', Arial, sans-serif;
-  background-color: #f7f7f7;
+  background-color: #f3f5f7;
   color: #333;
+  line-height: 1.6;
 }
 
-/* 상단 헤더 스타일: 정부 사이트 느낌의 깔끔한 파란색 배경에 흰색 제목 */
+/* 상단 헤더 스타일 */
 #header {
   background-color: #004f9e;
-  padding: 30px 20px;
-  text-align: center;
-}
-
-#header h1 {
-  font-size: 3rem;
   color: #fff;
-  font-weight: 700;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+#header h1 {
+  font-size: 2.5rem;
+}
+#user-area {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+#user-info {
+  font-size: 1rem;
+  margin-right: 10px;
+}
+#logout-btn {
+  background-color: crimson;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-/* 네비게이션 바 스타일 */
+/* 네비게이션 바 */
 #nav {
   background-color: #003d7a;
   display: flex;
   justify-content: center;
-  align-items: center;
+  gap: 15px;
   padding: 10px 0;
 }
-
 #nav button {
-  background: none;
+  background: transparent;
   border: none;
   color: #fff;
-  font-size: 1.2rem;
-  margin: 0 15px;
+  font-size: 1.1rem;
+  padding: 8px 12px;
   cursor: pointer;
-  padding: 10px 15px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background 0.3s, color 0.3s;
 }
-
 #nav button:hover {
   background-color: #fff;
   color: #003d7a;
@@ -53,60 +67,261 @@ body {
 
 /* 콘텐츠 영역 */
 #content {
+  max-width: 1200px;
+  margin: 20px auto;
   padding: 20px;
-  margin: 20px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* 동물 리스트 (카드) */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.card {
   background-color: #fff;
   border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  width: 280px;
+  overflow: hidden;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+.card:hover {
+  transform: scale(1.02);
+}
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.card h3 {
+  font-size: 1.3rem;
+  margin: 10px;
+}
+.card p {
+  margin: 0 10px 10px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* 게시판 스타일 (게시글 박스, 댓글 등) */
+.article-box {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.article-header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.article-title {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #004f9e;
+}
+.article-meta {
+  font-size: 0.85rem;
+  color: #777;
+}
+.article-actions button {
+  background-color: #004f9e;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.article-actions button:nth-child(2) {
+  background-color: crimson;
+}
+.article-content p {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+/* 댓글 섹션 */
+.comments-section {
+  margin-top: 10px;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+.comments-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.comments-list li {
+  border-bottom: 1px solid #eee;
+  padding: 8px 0;
+  font-size: 0.9rem;
+}
+.btn-show-comments,
+.btn-more-comments {
+  background-color: #004f9e;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 6px;
+  font-size: 0.9rem;
+}
+.btn-show-comments:hover,
+.btn-more-comments:hover {
+  background-color: #003d7a;
+}
+
+/* 댓글 작성 폼 */
+.comment-form textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
   border-radius: 4px;
 }
-
-/* 기타: 버튼 및 기타 요소 기본 스타일 (이미 작성했던 스타일 적용 가능) */
-button {
-  font-family: inherit;
+.comment-form button {
+  background-color: crimson;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 6px;
+  font-size: 0.9rem;
 }
-/* 글 작성 폼 컨테이너 스타일 */
-#post-form {
-  background-color: #f9f9f9;     /* 밝은 회색 배경으로 눈에 편안함 제공 */
-  border: 1px solid #ddd;        /* 연한 회색 테두리 */
-  border-radius: 6px;            /* 살짝 둥근 모서리 */
-  padding: 20px;                 /* 내부 여백 */
-  margin: 20px 0;                /* 위아래 여백 */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);  /* 약간의 그림자 효과로 부각 */
-}
-
-/* 글 작성 입력 필드 및 텍스트 영역 스타일 */
-#post-form input,
-#post-form textarea {
-  width: 100%;                   /* 가로 전체 사용 */
-  padding: 12px 10px;            /* 적당한 내부 여백 */
-  margin-bottom: 15px;           /* 아래쪽 여백 */
-  border: 1px solid #ccc;        /* 기본 테두리 색상 */
-  border-radius: 4px;            /* 모서리를 둥글게 */
-  font-size: 1rem;               /* 읽기 좋은 글자 크기 */
-  transition: border-color 0.3s ease;
+.comment-form button:hover {
+  background-color: darkred;
 }
 
-/* 포커스 시 테두리 색상 변경 */
-#post-form input:focus,
-#post-form textarea:focus {
-  border-color: #004f9e;
-  outline: none;
+/* 폼 스타일 (로그인, 회원가입, 글 작성 폼 등) */
+form {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin: 20px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
-
-/* 글 작성 버튼 스타일 */
-#post-form button {
-  display: inline-block;
-  background-color: #004f9e;     /* 정부 사이트 느낌의 파란색 */
-  color: #fff;                   /* 흰색 텍스트 */
-  border: none;                  /* 테두리 없음 */
-  padding: 12px 25px;            /* 적당한 내부 여백 */
-  font-size: 1rem;               /* 버튼 글자 크기 */
-  border-radius: 4px;            /* 둥근 모서리 */
-  cursor: pointer;               /* 마우스 커서 변경 */
-  transition: background-color 0.3s ease;  /* 부드러운 색상 전환 효과 */
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
 }
-
-/* 버튼 호버 시 스타일 */
-#post-form button:hover {
+form button {
+  background-color: #004f9e;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+form button:hover {
   background-color: #003d7a;
+}
+
+/* 콘텐츠 영역 */
+#content {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Petfinder 동물 카드 스타일 */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.pet-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  width: 260px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.pet-card:hover {
+  transform: translateY(-5px);
+}
+.pet-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.pet-card h3 {
+  font-size: 1.2rem;
+  margin: 10px;
+}
+.pet-card p {
+  font-size: 0.9rem;
+  margin: 0 10px 10px;
+  color: #666;
+}
+
+/* Modal 오버레이 스타일 */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.modal {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+}
+.modal img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+.modal h2 {
+  margin-top: 10px;
+  font-size: 1.5rem;
+}
+.modal p {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #555;
+}
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
 }

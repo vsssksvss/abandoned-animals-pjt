@@ -5,7 +5,9 @@ dotenv.config();
 
 // JWT 검증 미들웨어
 function authenticateToken(req, res, next) {
-  const token = req.headers['authorization'];
+  // Authorization 헤더에서 토큰 추출 ("Bearer <토큰>" 형식)
+  const authHeader = req.headers['authorization'];
+  const token = authHeader && authHeader.split(' ')[1]; // "Bearer" 제거
 
   if (!token) {
     return res.status(403).json({ message: '토큰이 없습니다.' });

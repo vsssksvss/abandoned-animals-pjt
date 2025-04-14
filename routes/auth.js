@@ -70,8 +70,8 @@ router.post('/login', (req, res) => {
       return res.status(400).json({ message: '잘못된 비밀번호입니다.' });
     }
 
-    // 로그인 성공 후 JWT 토큰 발급
-    const token = jwt.sign({ userId: user.id }, JWT_SECRET, { expiresIn: '1h' });
+    // 로그인 성공 후 JWT 토큰 발급 (payload에 "id" 속성 사용)
+    const token = jwt.sign({ id: user.id }, JWT_SECRET, { expiresIn: '1h' });
 
     res.status(200).json({ message: '로그인 성공!', token });
   });
