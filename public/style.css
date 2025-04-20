@@ -325,3 +325,244 @@ form button:hover {
   font-size: 1.5rem;
   cursor: pointer;
 }
+
+/* Modal 오버레이 */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal 컨테이너 */
+.modal {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  text-align: center;
+}
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* 편집 폼 스타일 (기존 form 스타일과 통일) */
+.form-container input,
+.form-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.form-container button {
+  background-color: #004f9e;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.form-container button:hover {
+  background-color: #003d7a;
+}
+/* 카테고리 네비게이션 바 */
+.category-nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.category-nav .cat-btn {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.category-nav .cat-btn:hover {
+  background-color: #ddd;
+}
+
+/* 게시글 작성 폼 수정 */
+.form-container select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+/* 플로팅 게시글 추가 버튼 */
+#floating-add-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #004f9e;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 2rem;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: background-color 0.3s;
+}
+#floating-add-btn:hover {
+  background-color: #003d7a;
+}
+
+/* Modal 오버레이 및 Modal 컨테이너 (기존과 동일) */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.modal {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  text-align: center;
+}
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* 폼 스타일 (form-container) - 기존 내용 그대로 */
+.form-container input,
+.form-container textarea,
+.form-container select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.form-container button {
+  background-color: #004f9e;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+.form-container button:hover {
+  background-color: #003d7a;
+}
+
+/* 플로팅 게시글 추가 버튼 */
+#floating-add-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #004f9e;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 2rem;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s;
+  z-index: 9999;
+}
+#floating-add-btn:hover {
+  background-color: #003d7a;
+}
+
+/* 이미지 업로드 영역 스타일 */
+.image-drop-area,
+#image-drop-area {
+  border: 2px dashed #ccc;
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+.image-drop-area:hover,
+#image-drop-area:hover {
+  border-color: #333;
+  background-color: #e0e0e0;
+}
+.image-drop-area span,
+#image-drop-area span {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  display: block;
+}
+.image-drop-area p,
+#image-drop-area p {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 8px;
+}
+
+/* 게시글 목록 아이템 내 카테고리 굵은 텍스트 */
+.article-category {
+  font-weight: bold;
+  margin-right: 8px;
+}
+/* 게시글 목록의 "내 게시글" 스타일 */
+.article-category + span {
+  color: green;
+  font-weight: bold;
+}
+
+/* 게시글 상세 페이지 수정/삭제 버튼 (detail-actions) */
+.detail-header {
+  position: relative;
+  padding: 10px;
+  background-color: #fff;
+}
+.detail-actions {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.detail-actions button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 5px;
+}

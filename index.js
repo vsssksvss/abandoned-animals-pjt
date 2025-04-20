@@ -13,18 +13,19 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-// 기존 라우터
+
 const authRouter = require('./routes/auth');
 const articleRouter = require('./routes/articles');
 const commentRouter = require('./routes/comments');
-
-// Petfinder 라우터
+const uploadRouter = require('./routes/upload');
 const petfinderRouter = require('./routes/petfinder');
 
 app.use('/auth', authRouter);
 app.use('/articles', articleRouter);
 app.use('/articles/comments', commentRouter);
 app.use('/petfinder', petfinderRouter);
+app.use('/upload', uploadRouter);
+
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/index.html'));
